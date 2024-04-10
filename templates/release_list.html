@@ -1,0 +1,19 @@
+<!-- release_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Release List</title>
+</head>
+<body>
+<h1>Index of /release/</h1>
+<hr>
+<pre>
+        {% for release in releases %}
+            <a href="{% url 'release_detail' release.id %}">{{ release.name }}</a> {{ release.release_date }}
+        {% endfor %}
+    </pre>
+<hr>
+</body>
+</html>
